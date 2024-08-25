@@ -7,8 +7,16 @@
 </head>
 <body>
     <script type="text/Javascript">
-        let relogio = new.setTimeout();
-        document.write(relogio)
+        function relogioAtualizado(){
+            let data = new Date();
+            let hora = data.getHours().toString().padStart(2, '0');
+            let minuto = data.getMinutes().toString().padStart(2, '0');
+            let segundo = data.getSeconds().toString().padStart(2, '0');
+            let relogio = hora + " : " + minuto + " : " + segundo;
+            document.body.innerHTML = relogio;
+            setTimeout(relogioAtualizado, 1000);
+        }
+        relogioAtualizado();
     </script>
     
 </body>
