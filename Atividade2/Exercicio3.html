@@ -8,11 +8,38 @@
 <body>
     <form>
         <input type="text" id="palavra">
+        <button onclick="verificarPalindromo()">Verificar</button>
+
     </form>
     <script type="text/Javascript">
-        let palavra = document.getElementById("palavara").value;
-        let 
-        alert()
+        function verificarPalindromo(){
+            let palavra = document.getElementById("palavra").value; //recebe a palavra
+            let texto = palavra.replace(/\s+/g, '').toUpperCase(); //converte todas as letras para maiusculas e a função replace elimina os espaços
+            let inicio = 0; //posição inicial
+            let final = texto.length - 1; //posição final
+            let igual = 0 //número de letras iguais, considerar a comparação entre inicial e final
+            let tentativas = 0;//número de comparações entre inicial e final
+            while(inicio <= final){
+                let letra1 = texto.charAt(inicio);//primeira letra ou a letra até a metade
+                let letra2 = texto.charAt(final);//última letra ou a letra até a metade(de trás para frente)
+                
+                if( letra1 == letra2){
+                    igual++;
+                    tentativas++;
+                }
+                else{
+                    tentativas++;
+                }
+                inicio++;
+                final--;
+            }
+            if (igual == tentativas){//todas as letras são iguais
+                alert("É um palindromo");
+            }
+            else{//alguma letra é diferente
+                alert("Não é um palindromo");
+            }
+        }
     </script>
 </body>
 </html>
