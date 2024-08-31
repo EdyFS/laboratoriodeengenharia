@@ -8,14 +8,11 @@ function armazenarValores(){
     valoresDoUsuario.push(valor);
     console.log(valoresDoUsuario);
     console.log(valor);
-    ordenarValores();
-    exibirValores();
-    apagarCampo();
-
 }
 
 //apagar espaço
 function apagarCampo(){
+    valor = document.getElementById('lista').value;
     valor = document.value('');
 }
 
@@ -25,5 +22,13 @@ function ordenarValores(){
 }
 //exibir array
 function exibirValores(){
-    valoresDoUsuario.innerHTML;
+    document.write(valoresDoUsuario);
+}
+
+exibirValores()
+//executar
+function executar(){
+    armazenarValores();
+    ordenarValores();
+    apagarCampo();
 }
