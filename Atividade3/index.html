@@ -6,14 +6,16 @@
     <title>Atividade 3</title>
 </head>
 <body>
-    <form>
+    <form onsubmit="executar(event)">
         <h1>Insira os valores</h1>
-        <input type="name" id="lista">
-        <button onclick="executar()">Adicionar</button>
+        <input type="text" id="lista" placeholder="Digite uma valor">
+        <button type="submit">Adicionar</button>
     </form>
     <div>
         <h1>Valores adicionados</h1>
+        <ul id="listaPronta">
         
+        </ul>
     </div>
     <script src="funcoes.js"></script>
 </body>
