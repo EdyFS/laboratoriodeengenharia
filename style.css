@@ -1,0 +1,12 @@
+body{
+    background-color: lightcoral;
+}
+
+nav{
+    justify-content: space-between;
+    text-align: center;
+}
+
+a{
+    padding: 2em;
+}
