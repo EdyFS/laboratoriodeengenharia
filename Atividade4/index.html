@@ -4,14 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Atividade 4</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <form>
         <h1>Formulário de Cadastro</h1>
+        <label type="text" id="nome">Nome:</label>
         <input type="text" id="nome" placeholder="Digite seu nome completo">
+
+        <label type="text" id="email">Email:</label>
         <input type="text" id="email" placeholder="fulano.com">
+
+        <label type="date" id="data_nascimento">Data Nascimento:</label>
+        <input type="date" id="data_nascimento" placeholder="dd/mm/aaaa">
+
+        <label type="number" id="fixo">Telefone Fixo:</label>
         <input type="number" id="fixo" placeholder="(99)99999999">
+        
+        <label type="number" id="celular">Telefone Celular:</label>
         <input type="number" id="celular" placeholder="(99)99999999">
+
+        <label type="">Professor</label>
+        <input type="radio" id="tipo">
+
+        <label type="">Aluno</label>
+        <input type="radio" id="tipo">
+
+        <label type="text" id="area">Área</label>
+        <input type="text" id="area" placeholder="Digite sua área de atuação">
+
+        <label type="text" id="lattes">Lattes</label>
+        <input type="text" id="lattes" placeholder="Digite aqui o endereço para seu Lattes">
+
+        <label type="text" id="curso">Curso</label>
+        <input type="text" id="curso" placeholder="Digite seu curso">
+
+        <button type="submit">Enviar</button>
+        <button type="reset">Redefinir</button>
     </form>
 </body>
 </html>
