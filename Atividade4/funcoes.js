@@ -13,14 +13,26 @@ function Pessoa(){
     this.setemail = function (vemail){
         this.email = vemail;
     }
-    this.getnomeCompleto = function(){
+    this.getemail = function(){
         return this.getemail;
     }
     this.setdata_nascimento = function (vdata_nascimento){
-        this.nomeCompleto = vnomeCompleto;
+        this.data_nascimento = vdata_nascimento;
     }
     this.getdata_nascimento = function(){
         return this.getdata_nascimento;
+    }
+    this.setfixo = function (vfixo){
+        this.fixo = vfixo;
+    }
+    this.getfixo = function(){
+        return this.getfixo;
+    }
+    this.setdcelular = function (vcelular){
+        this.celular = vcelular;
+    }
+    this.getcelular = function(){
+        return this.getcelular;
     }
     
 
@@ -53,4 +65,24 @@ function Aluno(){
         return this.getcurso;
     }
     Pessoa.call(this);
+}
+
+function validarNome(nome){
+    nome = document.getElementById('nome').value;
+    if (nome )
+}
+
+function validaremail(nome){
+    nome = document.getElementById('nome').value;
+    if (nome )
+}
+
+function validarNome(nome){
+    nome = document.getElementById('nome').value;
+    if (nome )
+}
+
+function validarNome(nome){
+    nome = document.getElementById('nome').value;
+    if (nome )
 }
