@@ -159,3 +159,7 @@ function validarMatriculaAluno(matriculaAluno){
         document.getElementById("matriculaAluno").innerHTML = "Matrícula inválida"
     }
 }
+
+function escolherTipo(){
+    
+}

@@ -8,45 +8,62 @@
 </head>
 <body>
     <form>
-        <h1>Formulário de Cadastro</h1>
-        <label for="nome">Nome:</label>
-        <input type="text" id="nome" placeholder="Digite seu nome completo" onblur="validarNome()">
+        <h1>Formulário de Cadastro:</h1>
+        <div class="forms" id="bloco1">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" placeholder="Digite seu nome completo" onblur="validarNome()">
+        </div>
 
-        <label for="email">Email:</label>
-        <input type="text" id="email" placeholder="fulano.com" onblur="validarEmail()">
+        <div class="forms" id="bloco2">
+            <label for="email">Email:</label>
+            <input type="email" id="email" placeholder="fulano.com" onblur="validarEmail()">
+            
+            <label for="dataNascimento">Data Nascimento:</label>
+            <input type="date" id="dataNascimento" placeholder="dd/mm/aaaa" onblur="validarDataNascimento()">
+        </div>
 
-        <label for="dataNascimento">Data Nascimento:</label>
-        <input type="date" id="dataNascimento" placeholder="dd/mm/aaaa" onblur="validarDataNascimento()">
-
-        <label for="fixo">Telefone Fixo:</label>
-        <input type="number" id="fixo" placeholder="(99)99999999" onblur="validarFixo()">
+        <div class="forms" id="bloco3">
+            <label for="fixo">Telefone Fixo:</label>
+            <input type="number" id="fixo" placeholder="(99)99999999" onblur="validarFixo()">
         
-        <label for="celular">Telefone Celular:</label>
-        <input type="number" id="celular" placeholder="(99)99999999" onblur="validarCelular()">
+            <label for="celular">Telefone Celular:</label>
+            <input type="number" id="celular" placeholder="(99)99999999" onblur="validarCelular()">
+            
+            <div id="tipos">
+                    <label for="professor">Professor</label>
+                    <input type="radio" id="tipo" name="tipo" value="Professor">
 
-        <label for="tipo">Professor</label>
-        <input type="radio" id="tipo">
+                    <label for="aluno">Aluno</label>
+                    <input type="radio" id="tipo" name="tipo" value="Aluno">
+            </div>
+        </div>
 
-        <label for="tipo">Aluno</label>
-        <input type="radio" id="tipo">
+        <div class="forms" id="bloco5">
+            <label for="area">Área</label>
+            <input type="text" id="area" placeholder="Digite sua área de atuação" onblur="validarArea()">
 
-        <label for="area">Área</label>
-        <input type="text" id="area" placeholder="Digite sua área de atuação" onblur="validarArea()">
+            <label for="matriculaProfessor">Matrícula do Professor:</label>
+            <input type="number" id="matriculaProfessor" placeholder="Digite sua Matrícula" onblur="validarMatriculaProfessor()">
+        </div>
+            
+        
+        <div class="forms" id="bloco6">
+            <label for="lattes">Lattes</label>
+            <input type="text" id="lattes" placeholder="Digite aqui o endereço para seu Lattes" onblur="validarLattes()">
+        </div>
+        
+        <div class="forms" id="bloco7">
+            <label for="curso">Curso</label>
+            <input type="text" id="curso" placeholder="Digite seu curso" onblur="validarCurso()">
 
-        <label for="lattes">Lattes</label>
-        <input type="text" id="lattes" placeholder="Digite aqui o endereço para seu Lattes" onblur="validarLattes()">
+            <label for="matriculaAluno">Matrícula do Aluno:</label>
+            <input type="number" id="matriculaAluno" placeholder="Digite sua Matrícula" onblur="validarMatriculaAluno()">
+        </div>
 
-        <label for="matriculaProfessor">Matrícula do Professor:</label>
-        <input type="number" id="matriculaProfessor" placeholder="Digite sua Matrícula" onblur="validarMatriculaProfessor()">
-
-        <label for="curso">Curso</label>
-        <input type="text" id="curso" placeholder="Digite seu curso" onblur="validarCurso()">
-
-        <label for="matriculaAluno">Matrícula do Aluno:</label>
-        <input type="number" id="matriculaAluno" placeholder="Digite sua Matrícula" onblur="validarMatriculaAluno()">
-
-        <button type="submit">Enviar</button>
-        <button type="reset">Redefinir</button>
+        <div class="forms" id="botoes">
+            <button type="submit">Enviar</button>
+            <button type="reset">Redefinir</button>
+        </div>
     </form>
 </body>
 </html>

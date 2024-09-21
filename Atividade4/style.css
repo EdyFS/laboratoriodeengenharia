@@ -1,12 +1,19 @@
 body{
-    position: absolute;
+    display: flex;
+    justify-content: center;
+    background-color: #000;
+    margin: 0px;
     
 }
 
 form{
-    position: relative;
+    display: block;
     justify-content: center;
     width: 600px;
+    margin: 0px;
+    padding: 20px;
+    background-color: #fff;
+
 }
 
 h1{
@@ -28,7 +35,8 @@ input{
     font-style: normal;
     font-size: 12px;
     color: #999;
-    border: 0px 0px 0px 1px solid #ccc;
+    border: none;
+    border-bottom: 1px solid #ccc;
 }
 
 button{
@@ -39,4 +47,35 @@ button{
     background-color: #eee;
     border: 0px 0px 0px 1px solid #aaa;
     border-radius: 4px;
+}
+
+.forms{
+    padding: 10px;
+}
+
+#bloco1{
+    display: block;
+    justify-content: start;
+    padding: 5px;
+}
+
+#bloco2{
+    display: flex;
+    justify-content: space-between;
+}
+
+#bloco3{
+    display: flex;
+    justify-content: space-between;
+}
+
+#tipo{
+    display: flex;
+}
+
+#botoes{
+    display: flex;
+    justify-content: space-evenly;
+    
+    padding: 10px;
 }
