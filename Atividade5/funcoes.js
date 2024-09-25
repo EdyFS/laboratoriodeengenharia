@@ -1,5 +1,29 @@
 class Tarefa{
     constructor (nome, descricao, status){
+        this.nome = nome;
+        this.descricao = descricao;
+        this.status = status;
+        get nome(){
+
+        }
+        set nome(){
+
+        }
+
+        get descricao(){
+
+        }
+        set descricao(){
+
+        }
+
+        get status(){
+
+        }
+
+        set status(){
+
+        }
 
     }
     concluir(){
@@ -11,7 +35,10 @@ class Tarefa{
 }
 
 class GerenciadorDeTarefas{
-    constructor ()
+    constructor (){
+        arrayTarefas = [];
+    }
+
     adicionarTarefa(Tarefa){
 
     }
@@ -25,6 +52,6 @@ class GerenciadorDeTarefas{
 
     }
     visualizarDetalhes(index){
-        
+
     }
 }
