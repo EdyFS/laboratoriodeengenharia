@@ -1,3 +1,84 @@
 body{
     background-color: black;
+    display: flex;
+    justify-content: center;
+    position: static;
+}
+
+.gerenciador{
+    background-color: #fff;
+    width: 600px;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    position: relative;
+}
+
+input{
+    border: solid 1px black;
+}
+
+#formulario{
+    width: 100%;
+    display: block;
+    position: relative;
+    padding: 10px;
+    
+}
+
+#nome{
+    width: 550px;
+    display: block;
+    margin: 5px;
+    padding: 5px;
+}
+
+#descricao{
+    width: 550px;
+    display: block;
+    margin: 5px;
+    padding: 5px;
+}
+
+button{
+    background-color: green;
+    color: #fff;
+    margin: 5px;
+    padding: 5px;
+    width: 550px;
+    border: none;
+    border-radius: 3%;
+}
+
+ul{
+    list-style: none;
+    display: block;
+    padding: 5px;
+}
+
+li{
+    display: flex;
+    padding: 5px;
+    margin: 5px;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: seashell;
+}
+
+.detalhes{
+    background-color: royalblue;
+    padding: 3px;
+    width: auto;
+}
+
+.concluir{
+    padding: 3px;
+    width: auto;
+}
+
+.remover{
+    background-color: red;
+    padding: 3px;
+    width: auto;
 }

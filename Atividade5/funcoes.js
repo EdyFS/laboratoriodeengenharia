@@ -47,25 +47,28 @@ class GerenciadorDeTarefas{
             const li = document.createElement('li');
             li.textContent = tarefa.nome;
 
-            const detalhesBtn = document.createElement('button');
-            detalhesBtn.textContent = 'Ver Detalhes';
-            detalhesBtn.onclick = () => alert(tarefa.detalhar());
+            const botaoDetalhes = document.createElement('button');
+            botaoDetalhes.textContent = 'Detalhes';
+            botaoDetalhes.classList.add('detalhes');
+            botaoDetalhes.onclick = () => alert(tarefa.detalhar());
 
-            const concluirBtn = document.createElement('button');
-            concluirBtn.textContent = 'Concluir Tarefa';
-            concluirBtn.onclick = () => {
+            const botaoConcluir = document.createElement('button');
+            botaoConcluir.textContent = 'Concluir';
+            botaoConcluir.classList.add('concluir');
+            botaoConcluir.onclick = () => {
                 this.marcarComoConcluida(index);
             };
 
-            const removerBtn = document.createElement('button');
-            removerBtn.textContent = 'Remover Tarefa';
-            removerBtn.onclick = () => {
+            const botaoRemover = document.createElement('button');
+            botaoRemover.textContent = 'Remover';
+            botaoRemover.classList.add('remover');
+            botaoRemover.onclick = () => {
                 this.removerTarefa(index);
             };
 
-            li.appendChild(detalhesBtn);
-            li.appendChild(concluirBtn);
-            li.appendChild(removerBtn);
+            li.appendChild(botaoDetalhes);
+            li.appendChild(botaoConcluir);
+            li.appendChild(botaoRemover);
             lista.appendChild(li);
         });
     }
