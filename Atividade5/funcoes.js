@@ -2,7 +2,7 @@ class Tarefa{
     constructor (nome, descricao, status){
         this.nome = nome;
         this.descricao = descricao;
-        this.status = status;
+        this.status = 'Pendente';
         get nome(){
 
         }
@@ -27,7 +27,7 @@ class Tarefa{
 
     }
     concluir(){
-
+        this.status = 'Concluída'
     }
     detalhar(){
 
@@ -39,14 +39,20 @@ class GerenciadorDeTarefas{
         arrayTarefas = [];
     }
 
-    adicionarTarefa(Tarefa){
-
+    adicionarTarefa(tarefa){
+        this.arrayTarefas.push(tarefa);
+        this.listarTarefas();
     }
+
     listarTarefas(){
+        const lista = document.getElementById('lista');
+        lista.innerHTML = '';
+
 
     }
     marcarComoConcluida(index){
-
+        this.arrayTarefas[index].concluir();
+        this.listarTarefas();
     }
     removerTarefa(index){
 
