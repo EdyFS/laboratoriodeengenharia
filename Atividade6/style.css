@@ -1,0 +1,11 @@
+body{
+    display: flex;
+    justify-content: center;
+    position: static;
+}
+
+#root{
+    justify-content: center;
+    display: block;
+    position: relative;
+}
