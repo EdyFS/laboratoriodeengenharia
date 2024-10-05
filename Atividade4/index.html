@@ -12,52 +12,66 @@
         <div class="forms" id="bloco1">
             <label for="nome">Nome:</label>
             <input type="text" id="nome" placeholder="Digite seu nome completo" onblur="validarNome()">
+            <span class="erro" id="erroNome"></span>
         </div>
 
         <div class="forms" id="bloco2">
             <label for="email">Email:</label>
             <input type="email" id="email" placeholder="fulano.com" onblur="validarEmail()">
+            <span class="erro" id="erroEmail"></span>
             
             <label for="dataNascimento">Data Nascimento:</label>
             <input type="date" id="dataNascimento" placeholder="dd/mm/aaaa" onblur="validarDataNascimento()">
+            <span class="erro" id="erroDataNascimento"></span>
         </div>
 
         <div class="forms" id="bloco3">
             <label for="fixo">Telefone Fixo:</label>
             <input type="number" id="fixo" placeholder="(99)99999999" onblur="validarFixo()">
+            <span class="erro" id="erroFixo"></span>
         
             <label for="celular">Telefone Celular:</label>
             <input type="number" id="celular" placeholder="(99)99999999" onblur="validarCelular()">
+            <span class="erro" id="erroCelular"></span>
             
-            <div id="tipos">
+            <div id="tipos" oninput="escolherTipo()">
                     <label for="professor">Professor</label>
-                    <input type="radio" id="tipo" name="tipo" value="Professor">
+                    <input type="radio" id="tipo" name="tipo" value="Professor" oninput="escolherTipo()">
 
                     <label for="aluno">Aluno</label>
-                    <input type="radio" id="tipo" name="tipo" value="Aluno">
+                    <input type="radio" id="tipo" name="tipo" value="Aluno" oninput="escolherTipo()">
             </div>
         </div>
 
-        <div class="forms" id="bloco5" hidden>
+        <div id="camposProfessor" class="hidden">
+            <div class="forms" id="bloco5" >
             <label for="area">Área</label>
-            <input type="text" id="area" placeholder="Digite sua área de atuação" onblur="validarArea()">
+            <input type="text" id="area" name="area" placeholder="Digite sua área de atuação" onblur="validarArea()">
+            <span class="erro" id="erroArea"></span>
 
             <label for="matriculaProfessor">Matrícula do Professor:</label>
-            <input type="number" id="matriculaProfessor" placeholder="Digite sua Matrícula" onblur="validarMatriculaProfessor()">
+            <input type="number" id="matriculaProfessor" name="matriculaProfessor" placeholder="Digite sua Matrícula" onblur="validarMatriculaProfessor()">
+            <span class="erro" id="erroMatriculaProfessor"></span>
         </div>
             
         
-        <div class="forms" id="bloco6" hidden>
+        <div class="forms" id="bloco6">
             <label for="lattes">Lattes</label>
-            <input type="text" id="lattes" placeholder="Digite aqui o endereço para seu Lattes" onblur="validarLattes()">
+            <input type="text" id="lattes" name="lattes" placeholder="Digite aqui o endereço para seu Lattes" onblur="validarLattes()">
+            <span class="erro" id="erroLattes"></span>
+        </div>
         </div>
         
-        <div class="forms" id="bloco7" hidden>
+        <div id="camposAluno" class="hidden">
+            <div class="forms" id="bloco7">
             <label for="curso">Curso</label>
-            <input type="text" id="curso" placeholder="Digite seu curso" onblur="validarCurso()">
+            <input type="text" id="curso" name="curso" placeholder="Digite seu curso" onblur="validarCurso()">
+            <span class="erro" id="erroCurso"></span>
 
             <label for="matriculaAluno">Matrícula do Aluno:</label>
-            <input type="number" id="matriculaAluno" placeholder="Digite sua Matrícula" onblur="validarMatriculaAluno()">
+            <input type="number" id="matriculaAluno" name="matriculaAluno" placeholder="Digite sua Matrícula" onblur="validarMatriculaAluno()">
+            <span class="erro" id="erroMatriculaAluno"></span>
+        </div>
         </div>
 
         <div class="forms" id="botoes" >
