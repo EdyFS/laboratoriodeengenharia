@@ -12,7 +12,34 @@
     <div id="root"></div>
 
     <script type="text/babel">
-        function Elemento(){
+        function Letreiro({ mensagem }) {
+            
+            const [texto, setTexto] = React.useState('');
+            const [indice, setIndice] = React.useState(0);
+
+            
+            React.useEffect(() => {
+                const intervalo = setInterval(() => {
+                    if (indice < mensagem.length) {
+                        setTexto((prevTexto) => prevTexto + mensagem[indice]);
+                        setIndice((prevIndice) => prevIndice + 1);
+                    } else {
+                        clearInterval(intervalo);
+                    }
+                }, 150);
+
+                return () => clearInterval(intervalo);
+            }, [indice, mensagem]);
+
+            return <h1>{texto}</h1>;
+        }
+
+        ReactDOM.render(
+            <Letreiro mensagem="Venha estudar na Fatec!" />,
+            document.getElementById('root')
+        );
+
+        /*function Elemento(){
             return <h1>Venha estudar na Fatec!</h1>
         }
 
@@ -23,7 +50,7 @@
 
         const container = document.getElementById('root');
         const root = ReactDom.createRoot(container);
-        root.render(<Elemento/>);
+        root.render(<Elemento/>);*/
     </script>
     
 </body>

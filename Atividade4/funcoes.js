@@ -161,5 +161,11 @@ function validarMatriculaAluno(matriculaAluno){
 }
 
 function escolherTipo(){
-    
+    let tipo = document.getElementById('tipos').value;
+    if (tipo === 'aluno'){
+
+    }
+    elif (tipo === 'professor'){
+        
+    }
 }
